@@ -1,4 +1,13 @@
-<div>
-  <h1>Welcome to {{title}}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Mes appareils</h2>
+      <ul class="list-group">
+        <app-appareil [appareilName]="appareilOne" [appareilStatus]="'Eteint'"></app-appareil>
+        <app-appareil [appareilName]="appareilTwo" [appareilStatus]="'Allumer'"></app-appareil>
+        <app-appareil [appareilName]="appareilThree" [appareilStatus]="'Unknow'"></app-appareil>
+      </ul>
+      <button class="btn btn-success" [disabled]="!isAuth" (click)="onAllume()">Tout allumer</button>
+    </div>
+  </div>
 </div>
-<app-first></app-first>
